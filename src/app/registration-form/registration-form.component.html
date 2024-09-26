@@ -1,0 +1,47 @@
+<div class="registration-container">
+  <h2>User Registration</h2>
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <!-- Username input field -->
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input
+        id="username"
+        type="text"
+        class="form-control"
+        formControlName="username"
+        placeholder="Enter username"
+        (blur)="checkUsernameAvailability()" 
+      />
+      <!-- Show success message if username is available -->
+      <span *ngIf="usernameAvailable === true && registrationForm.get('username')?.value && registrationForm.get('username')?.value.trim().length > 0  && 
+           registrationForm.get('username')?.value.trim().length <= 20"  
+       class="text-success">Username is available!</span>
+      <!-- Show error if username already exists -->
+      <span *ngIf="usernameAvailable === false" class="text-danger">User is already exist, Plese use another Username.</span>
+      <!-- Display validation error messages for the username field -->
+      <span *ngIf="getErrorMessage('username')" class="text-danger">{{ getErrorMessage('username') }}</span>
+    </div>
+
+    <!-- Country selection dropdown -->
+    <div class="form-group">
+      <label for="country">Country:</label>
+      <select id="country" class="form-control" formControlName="country">
+        <option value="" disabled>Select country</option>
+        <!-- Populate the dropdown with countries fetched from the API -->
+        <option *ngFor="let country of countries" [value]="country.code">{{ country.name }}</option>
+      </select>
+      <!-- Show error if country is not selected -->
+      <div *ngIf="registrationForm.controls['country'].touched && registrationForm.controls['country'].invalid">
+        <small class="text-danger">Country is required.</small>
+      </div>
+    </div>
+
+    <!-- Submit button disabled if form is invalid or username is unavailable -->
+    <button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid || usernameAvailable === false">
+      Submit
+    </button>
+
+    <!-- Show error message if registration fails -->
+    <div *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</div>
+  </form>
+</div>

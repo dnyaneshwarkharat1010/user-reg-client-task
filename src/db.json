@@ -1,0 +1,106 @@
+{
+  "countries": [
+    {
+      "code": "US",
+      "name": "United States",
+      "id": "ec85"
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "id": "b312"
+    },
+    {
+      "code": "IN",
+      "name": "India",
+      "id": "3dc0"
+    }
+  ],
+  "register": [
+    {
+      "id": "e227",
+      "username": "dkfma",
+      "country": "US"
+    },
+    {
+      "id": "6dce",
+      "username": "dynesh",
+      "country": "US"
+    },
+    {
+      "id": "608d",
+      "username": "alex123",
+      "country": "CA"
+    },
+    {
+      "id": "385c",
+      "username": "alex1234",
+      "country": "CA"
+    },
+    {
+      "id": "85e2",
+      "username": "alex12345",
+      "country": "US"
+    },
+    {
+      "id": "c1a5",
+      "username": "alexab@gmail.com",
+      "country": "CA"
+    },
+    {
+      "id": "b6a7",
+      "username": "dk123",
+      "country": "US"
+    },
+    {
+      "id": "de9f",
+      "username": "abc@123",
+      "country": "US"
+    },
+    {
+      "id": "2250",
+      "username": "alex123456",
+      "country": "IN"
+    },
+    {
+      "id": "08cf",
+      "username": "alex12356",
+      "country": "US"
+    },
+    {
+      "id": "5f2c",
+      "username": "alex12553",
+      "country": "CA"
+    },
+    {
+      "id": "789b",
+      "username": "alex123",
+      "country": "US"
+    },
+    {
+      "id": "2b2f",
+      "username": "kunal",
+      "country": "US"
+    },
+    {
+      "id": "2573",
+      "username": "alex123",
+      "country": "US"
+    },
+    {
+      "id": "79de",
+      "username": "dynes12345",
+      "country": "CA"
+    },
+    {
+      "username": "3000",
+      "country": "CA",
+      "id": "9Rl6bEp"
+    },
+    {
+      "username": "wert",
+      "country": "US",
+      "id": "iOhXO-k"
+    }
+  ]
+}
